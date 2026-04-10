@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meine DOS Spiele</title>
+  <script src="https://js-dos.com/6.22/current/js-dos.js"></script>
+</head>
 
+<body>
+
+<h1>Meine Spiele</h1>
+
+<button onclick="ladeSpiel('doom.zip')">DOOM starten</button>
+<button onclick="ladeSpiel('prince.zip')">Prince starten</button>
+
+<div id="spiel" style="width:800px; height:500px;"></div>
+
+<script>
+function ladeSpiel(datei) {
+  document.getElementById("spiel").innerHTML = "";
+  Dos(document.getElementById("spiel"), {
+    url: datei
+  });
+}
+</script>
+
+</body>
+</html>
